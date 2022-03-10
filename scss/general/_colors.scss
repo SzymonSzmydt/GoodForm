@@ -1,0 +1,16 @@
+@use "sass:color";
+
+$color-primary: #4595DE;
+$color-primary-shadow: color.scale($color-primary, $lightness: -50%);
+
+$color-secondary: #85CBFF;
+$color-secondary-shadow: color.scale($color-secondary, $lightness: -50%);
+
+$color-accent: #DAF3FF;
+$color-accent-shadow: color.scale($color-accent, $lightness: -50%);
+
+$color-white: #fff;
+$color-black: #3D4756;
+
+// #9D3B61
+// #D77094

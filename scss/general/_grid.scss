@@ -1,0 +1,72 @@
+@use "sass:math";
+
+$columns: 12;
+$column-base-width: math.div(100%, $columns);
+
+$breakpoint-sm: 360px;
+$breakpoint-md: 760px;
+$breakpoint-lg: 1366px;
+$breakpoint-xl: 1920px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+
+  [class*='col-'] {
+    min-height: 1px;
+    padding: 1rem;
+    width: $column-base-width;
+  }
+
+  @for $i from 1 through $columns {
+    .col-xs-#{$i} {
+      width: $column-base-width * $i;
+    }
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    @for $i from 1 through $columns {
+      .col-sm-#{$i} {
+        width: $column-base-width * $i;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    @for $i from 1 through $columns {
+      .col-md-#{$i} {
+        width: $column-base-width * $i;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    @for $i from 1 through $columns {
+      .col-lg-#{$i} {
+        width: $column-base-width * $i;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    @for $i from 1 through $columns {
+      .col-xl-#{$i} {
+        width: $column-base-width * $i;
+      }
+    }
+  }
+}

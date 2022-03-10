@@ -1,4 +1,4 @@
-const entryPath = "05_Zadanie_5";
+const entryPath = ".";
 
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
