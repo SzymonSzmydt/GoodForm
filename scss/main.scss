@@ -1,5 +1,9 @@
-@import "general/reset";
+@import "root/reset";
+
 @import "general/colors";
-@import "general/grid";
+@import "general/fonts";
+
+@import "general/variables";
+@import "root/grid";
 
 @import "components/header";
