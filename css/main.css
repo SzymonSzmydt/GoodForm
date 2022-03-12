@@ -384,15 +384,29 @@ a {
   font-display: swap;
   src: url(../fonts/Roboto-BoldItalic.ttf) format("ttf");
 }
-* {
-  box-sizing: border-box;
-}
-
 .container {
   width: 100%;
-  max-width: 1350px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container {
+    max-width: 1366px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .container {
+    max-width: 760px;
+  }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .row {
