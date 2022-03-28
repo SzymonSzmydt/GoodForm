@@ -13,12 +13,6 @@
     width: $column-base-width;
   }
 
-  @for $i from 1 through $columns {
-    .col-xs-#{$i} {
-      width: $column-base-width * $i;
-    }
-  }
-
   @media (min-width: $breakpoint-sm) {
     @for $i from 1 through $columns {
       .col-sm-#{$i} {

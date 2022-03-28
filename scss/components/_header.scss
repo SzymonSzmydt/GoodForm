@@ -5,41 +5,57 @@
   background-color: $color-primary;
 }
 
-  .logo {
-    display: flex;
-    align-items: center;
+.hamburger {          // hamburger menu
+  display: flex;
+  align-items: center;
 
-    height: $header-height;
+  height: $header-height;
 
-    text-transform: lowercase;
+  border: 1px solid red;  // border
 
-    span {
-      font-size: 2.25rem;
-      font-weight: 400;
-      color: $color-accent;
+  position: relative;
+
+    .bigMac {
+      width: 1.75rem;
+
+      border: 2px solid $color-accent;
+      border-radius: 0.7rem;
+
+        &::after, &::before {
+          position: absolute;
+          content: '';
+
+          left: 0; 
+
+          width: 1.5rem;
+    
+          border: 2px solid $color-accent;
+          border-radius: 0.7rem;
+        }
+        
+        &::after {
+          top: 1rem;
+        }
+
+        &::before {
+          bottom: 1rem;
+ 
+        }
+      
     }
-  }
+}
 
-  .nav {
-    border: 1px solid black;
+.logo {                 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-    ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
+  height: $header-height;
 
-      list-style: none;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $color-accent;
 
-      margin-top: 0;
-      height: 100%;
-
-      border: 1px solid red;
-
-      li, a {
-        border: 1px solid yellowgreen;
-        font-size: 1.25rem;
-        font-weight: 400;
-        color: $color-accent;
-      }
-    }
-  }
+  border: 1px solid blue;   // border
+}
