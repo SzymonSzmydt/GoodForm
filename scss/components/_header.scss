@@ -1,22 +1,37 @@
+@keyframes menuSlide {
+  from {
+    left: 0;
+    right: 100%
+  }
+
+  to {
+    left: 0;
+    right: 0;
+  }
+}
+
+
 .header {
   width: 100%;
   height: $header-height;
 
   background-color: $color-primary;
+  box-shadow: 0 3px 3px $color-primary-shadow;
 }
 
 .hamburger {          // hamburger menu
   display: flex;
   align-items: center;
 
-  height: $header-height;
-
-  border: 1px solid red;  // border
+  cursor: pointer;
 
   position: relative;
 
+  width: 2.5rem;
+  height: $header-height;
+
     .bigMac {
-      width: 1.75rem;
+      width: 100%;
 
       border: 2px solid $color-accent;
       border-radius: 0.7rem;
@@ -25,37 +40,74 @@
           position: absolute;
           content: '';
 
-          left: 0; 
-
-          width: 1.5rem;
+          left: 0;
+          right: 0; 
     
           border: 2px solid $color-accent;
           border-radius: 0.7rem;
         }
         
         &::after {
-          top: 1rem;
+          top: 1.1rem;
         }
 
         &::before {
-          bottom: 1rem;
- 
+          bottom: 1.1rem;
         }
-      
     }
-}
+  }
 
-.logo {                 
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  .menu {
+    display: flex;
 
-  height: $header-height;
+    @media screen and (max-width: $breakpoint-md) {
+      overflow: hidden;
 
-  text-transform: lowercase;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: $color-accent;
+      flex-direction: column;
+      align-items: center;
 
-  border: 1px solid blue;   // border
+      position: absolute;
+
+      top: $header-height;
+      left: 0;
+      right: 0;
+
+      box-shadow: 1px 0px 2px $color-primary-shadow;
+
+      a {
+        margin: 1rem 3rem;
+        padding: 0 1rem;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $color-secondary-shadow;
+
+        &:first-of-type {
+          margin-top: 2rem;
+        }
+
+        &:last-of-type {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .anim {
+      animation-name: menuSlide;
+      animation-duration: 0.6s;
+      animation-direction: normal;
+    }
+    
+  }
+
+  .logo {                 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: $header-height;
+
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $color-accent;
 }
