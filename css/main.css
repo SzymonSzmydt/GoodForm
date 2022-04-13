@@ -385,21 +385,22 @@ a {
   src: url(../fonts/Roboto-BoldItalic.ttf) format("ttf");
 }
 .container {
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
   padding: 0 1rem;
+  font-family: "Roboto", sans-serif;
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1366px) {
   .container {
     max-width: 1920px;
   }
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 760px) {
   .container {
     max-width: 1366px;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 250px) {
   .container {
     max-width: 760px;
   }
@@ -417,7 +418,7 @@ a {
   min-height: 1px;
   width: 8.3333333333%;
 }
-@media (min-width: 200px) {
+@media (min-width: 250px) {
   .row .col-sm-1 {
     width: 8.3333333333%;
   }
@@ -570,106 +571,156 @@ a {
   }
 }
 
-@-webkit-keyframes menuSlide {
-  from {
-    left: 0;
-    right: 100%;
-  }
-  to {
-    left: 0;
-    right: 0;
-  }
-}
-
-@keyframes menuSlide {
-  from {
-    left: 0;
-    right: 100%;
-  }
-  to {
-    left: 0;
-    right: 0;
-  }
-}
 .header {
   width: 100%;
-  height: 4rem;
+  height: 3.5rem;
   background-color: #A5798C;
   box-shadow: 0 3px 3px #916276;
 }
 
-.hamburger {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  width: 2.5rem;
-  height: 4rem;
-}
-.hamburger .bigMac {
-  width: 100%;
-  border: 2px solid #F0FDF0;
-  border-radius: 0.7rem;
-}
-.hamburger .bigMac::after, .hamburger .bigMac::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  right: 0;
-  border: 2px solid #F0FDF0;
-  border-radius: 0.7rem;
-}
-.hamburger .bigMac::after {
-  top: 1.1rem;
-}
-.hamburger .bigMac::before {
-  bottom: 1.1rem;
-}
-
-.menu {
-  display: flex;
-}
-@media screen and (max-width: 760px) {
-  .menu {
-    overflow: hidden;
-    flex-direction: column;
+@media screen and (min-width: 250px) {
+  .hamburger {
+    display: flex;
     align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: 2rem;
+    height: 3.5rem;
+  }
+  .hamburger .bigMacOff {
+    width: 100%;
+    border: 1px solid #F0FDF0;
+    border-radius: 0.7rem;
+  }
+  .hamburger .bigMacOff::after, .hamburger .bigMacOff::before {
     position: absolute;
-    top: 4rem;
+    content: "";
     left: 0;
     right: 0;
-    box-shadow: 1px 0px 2px #916276;
+    border: 1px solid #F0FDF0;
+    border-radius: 0.7rem;
   }
-  .menu a {
-    margin: 1rem 3rem;
-    padding: 0 1rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #466079;
+  .hamburger .bigMacOff::after {
+    top: 1.1rem;
   }
-  .menu a:first-of-type {
-    margin-top: 2rem;
+  .hamburger .bigMacOff::before {
+    bottom: 1.1rem;
   }
-  .menu a:last-of-type {
-    margin-bottom: 2rem;
+  .hamburger .bigMacOn {
+    width: 100%;
+    border: 0;
+  }
+  .hamburger .bigMacOn::after, .hamburger .bigMacOn::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    border: 1px solid #F0FDF0;
+    border-radius: 0.7rem;
+    transition: transform 0.4s ease;
+  }
+  .hamburger .bigMacOn::after {
+    top: 2rem;
+    transform: rotate(45deg);
+  }
+  .hamburger .bigMacOn::before {
+    bottom: 1.45rem;
+    transform: rotate(315deg);
   }
 }
-.menu .anim {
-  -webkit-animation-name: menuSlide;
-          animation-name: menuSlide;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
+@media screen and (min-width: 760px) {
+  .hamburger {
+    display: none;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .hamburger {
+    display: none;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@-webkit-keyframes hamburgerMenuSlide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hamburgerMenuSlide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menu {
+  position: relative;
+}
+@media screen and (min-width: 250px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menuMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.5rem;
+  padding: 2rem 2rem;
+  -webkit-animation: hamburgerMenuSlide 0.4s ease-in-out;
+          animation: hamburgerMenuSlide 0.4s ease-in-out;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 50%;
+  box-shadow: 0 1px 6px #888F73;
+}
+.menuMobile a {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #466079;
+  padding: 1.5rem 0;
+  width: 50%;
+}
+.menuMobile a:nth-child(1) {
+  border-bottom: 1px solid #6889A8;
+}
+.menuMobile a:nth-child(2) {
+  border-bottom: 1px solid #6889A8;
+}
+.menuMobile a:nth-child(3) {
+  border-bottom: 1px solid #6889A8;
+}
+.menuMobile a:nth-child(4) {
+  border-bottom: 1px solid #6889A8;
+  margin-bottom: 1rem;
+}
+.menuMobile a:hover, .menuMobile a:active {
+  color: #6889A8;
+  transition: 0.3s;
 }
 
 .logo {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 4rem;
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #F0FDF0;
+  height: 3.5rem;
+}
+@media screen and (min-width: 250px) {
+  .logo a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #F0FDF0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

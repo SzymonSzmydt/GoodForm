@@ -1,17 +1,44 @@
+@mixin mobile {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+  @mixin bigScreen {
+    @media screen and (min-width: $breakpoint-xl) {
+      @content;
+    }
+}
+
 .container {
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
   padding: 0 1rem;
 
-  @media screen and (min-width: $breakpoint-xl) {
+  font-family: "Roboto", sans-serif;
+
+  @include desktop {
     max-width: $breakpoint-xl;
   }
 
-  @media screen and (min-width: $breakpoint-lg) {
+  @include tablet {
     max-width: $breakpoint-lg;
   }
 
-  @media screen and (min-width: $breakpoint-md) {
+ @include mobile {
     max-width: $breakpoint-md;
   }
+  
 }
