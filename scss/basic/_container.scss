@@ -1,3 +1,9 @@
+@mixin watch {
+  @media screen and (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media screen and (min-width: $breakpoint-sm) {
     @content;
@@ -28,17 +34,5 @@
   padding: 0 1rem;
 
   font-family: "Roboto", sans-serif;
-
-  @include desktop {
-    max-width: $breakpoint-xl;
-  }
-
-  @include tablet {
-    max-width: $breakpoint-lg;
-  }
-
- @include mobile {
-    max-width: $breakpoint-md;
-  }
   
 }

@@ -390,21 +390,6 @@ a {
   padding: 0 1rem;
   font-family: "Roboto", sans-serif;
 }
-@media screen and (min-width: 1366px) {
-  .container {
-    max-width: 1920px;
-  }
-}
-@media screen and (min-width: 760px) {
-  .container {
-    max-width: 1366px;
-  }
-}
-@media screen and (min-width: 250px) {
-  .container {
-    max-width: 760px;
-  }
-}
 
 * {
   box-sizing: border-box;
@@ -418,7 +403,7 @@ a {
   min-height: 1px;
   width: 8.3333333333%;
 }
-@media (min-width: 250px) {
+@media (min-width: 230px) {
   .row .col-sm-1 {
     width: 8.3333333333%;
   }
@@ -578,37 +563,46 @@ a {
   box-shadow: 0 3px 3px #916276;
 }
 
-@media screen and (min-width: 250px) {
+@media screen and (min-width: 230px) {
   .hamburger {
     display: flex;
     align-items: center;
     cursor: pointer;
     position: relative;
+    margin-top: 0.875rem;
     width: 2rem;
-    height: 3.5rem;
+    height: 2rem;
   }
   .hamburger .bigMacOff {
     width: 100%;
-    border: 1px solid #F0FDF0;
+    height: 2px;
+    background-color: #F0FDF0;
     border-radius: 0.7rem;
+    transition: border 1.2s;
   }
   .hamburger .bigMacOff::after, .hamburger .bigMacOff::before {
     position: absolute;
     content: "";
-    left: 0;
-    right: 0;
-    border: 1px solid #F0FDF0;
+    height: 2px;
+    background-color: #F0FDF0;
     border-radius: 0.7rem;
+    transition: top 0.6s ease;
   }
   .hamburger .bigMacOff::after {
-    top: 1.1rem;
+    left: 0;
+    right: 0;
+    top: 0.3rem;
+    transform: rotate(0);
   }
   .hamburger .bigMacOff::before {
-    bottom: 1.1rem;
+    left: 0;
+    right: 0;
+    bottom: 0.3rem;
+    transform: rotate(0);
   }
   .hamburger .bigMacOn {
     width: 100%;
-    border: 0;
+    border: 1px solid transparent;
   }
   .hamburger .bigMacOn::after, .hamburger .bigMacOn::before {
     position: absolute;
@@ -620,12 +614,12 @@ a {
     transition: transform 0.4s ease;
   }
   .hamburger .bigMacOn::after {
-    top: 2rem;
+    top: 0.9rem;
     transform: rotate(45deg);
   }
   .hamburger .bigMacOn::before {
-    bottom: 1.45rem;
-    transform: rotate(315deg);
+    bottom: 1rem;
+    transform: rotate(-45deg);
   }
 }
 @media screen and (min-width: 760px) {
@@ -644,7 +638,7 @@ a {
   }
 }
 
-@-webkit-keyframes hamburgerMenuSlide {
+@-webkit-keyframes menuTurnOn {
   from {
     opacity: 0;
   }
@@ -653,7 +647,7 @@ a {
   }
 }
 
-@keyframes hamburgerMenuSlide {
+@keyframes menuTurnOn {
   from {
     opacity: 0;
   }
@@ -664,7 +658,7 @@ a {
 .menu {
   position: relative;
 }
-@media screen and (min-width: 250px) {
+@media screen and (min-width: 230px) {
   .menu {
     display: none;
   }
@@ -676,14 +670,18 @@ a {
   align-items: center;
   margin-top: 3.5rem;
   padding: 2rem 2rem;
-  -webkit-animation: hamburgerMenuSlide 0.4s ease-in-out;
-          animation: hamburgerMenuSlide 0.4s ease-in-out;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 50%;
   box-shadow: 0 1px 6px #888F73;
+  -webkit-animation-name: menuTurnOn;
+          animation-name: menuTurnOn;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-timing-function: easy-in;
+          animation-timing-function: easy-in;
 }
 .menuMobile a {
   text-align: center;
@@ -707,7 +705,6 @@ a {
 }
 .menuMobile a:hover, .menuMobile a:active {
   color: #6889A8;
-  transition: 0.3s;
 }
 
 .logo {
@@ -716,7 +713,12 @@ a {
   align-items: center;
   height: 3.5rem;
 }
-@media screen and (min-width: 250px) {
+@media screen and (max-width: 230px) {
+  .logo {
+    display: none;
+  }
+}
+@media screen and (min-width: 230px) {
   .logo a {
     font-size: 1rem;
     font-weight: 400;
