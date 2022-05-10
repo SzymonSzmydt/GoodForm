@@ -36,12 +36,4 @@
       }
     }
   }
-
-  @media (min-width: $breakpoint-xl) {
-    @for $i from 1 through $columns {
-      .col-xl-#{$i} {
-        width: $column-base-width * $i;
-      }
-    }
-  }
 }

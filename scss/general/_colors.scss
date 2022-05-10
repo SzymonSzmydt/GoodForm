@@ -1,6 +1,6 @@
 @use "sass:color";
 
-$color-primary: #A5798C;
+$color-primary: #D3F4FF;
 $color-primary-shadow: color.scale($color-primary, $lightness: -15%);
 
 $color-secondary: #6889A8;
@@ -9,7 +9,7 @@ $color-secondary-shadow: color.scale($color-secondary, $lightness: -30%);
 $color-third: #9EADBD;
 $color-third-shadow: color.scale($color-third, $lightness: -50%);
 
-$color-accent: #F0FDF0;
+$color-accent: #E6F4F1;
 
-$color-bonus: #888F73;
-$color-black: #3D4A3D;
+$color-bonus: #FCFCD4;
+$color-black: #3A4856;

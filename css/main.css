@@ -343,52 +343,45 @@ a {
 }
 
 @font-face {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
   font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(../fonts/Roboto-Regular.ttf) format("ttf");
+  font-weight: normal;
 }
 @font-face {
-  font-family: "Roboto", sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url(../fonts/Roboto-Italic.ttf) format("ttf");
-}
-@font-face {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(../fonts/Roboto-Medium.ttf) format("ttf");
-}
-@font-face {
-  font-family: "Roboto", sans-serif;
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url(../fonts/Roboto-MediumItalic.ttf) format("ttf");
-}
-@font-face {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  font-family: "Roboto-Bold";
+  font-style: bold;
   font-weight: 700;
-  font-display: swap;
-  src: url(../fonts/Roboto-Bold.ttf) format("ttf");
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto-BoldItalic";
   font-style: italic;
   font-weight: 700;
-  font-display: swap;
-  src: url(../fonts/Roboto-BoldItalic.ttf) format("ttf");
+  src: url(../fonts/Roboto-BoldItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Italic";
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/Roboto-Italic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto-MediumItalic";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/DM-Sans-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/DM-Sans-Medium.ttf") format("truetype");
 }
 .container {
   width: 100vw;
   margin: 0 auto;
   padding: 0 1rem;
-  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -559,8 +552,8 @@ a {
 .header {
   width: 100%;
   height: 3.5rem;
-  background-color: #A5798C;
-  box-shadow: 0 3px 3px #916276;
+  background-color: #9EADBD;
+  box-shadow: 0 3px 3px #6889A8;
 }
 
 @media screen and (min-width: 230px) {
@@ -575,29 +568,29 @@ a {
   }
   .hamburger .bigMacOff {
     width: 100%;
-    height: 2px;
-    background-color: #F0FDF0;
+    border: 1px solid #E6F4F1;
     border-radius: 0.7rem;
-    transition: border 1.2s;
+    transition: border 1.5s;
   }
   .hamburger .bigMacOff::after, .hamburger .bigMacOff::before {
     position: absolute;
     content: "";
     height: 2px;
-    background-color: #F0FDF0;
+    background-color: #E6F4F1;
     border-radius: 0.7rem;
-    transition: top 0.6s ease;
   }
   .hamburger .bigMacOff::after {
     left: 0;
     right: 0;
     top: 0.3rem;
+    transition: top 0.6s ease;
     transform: rotate(0);
   }
   .hamburger .bigMacOff::before {
     left: 0;
     right: 0;
     bottom: 0.3rem;
+    transition: bottom 0.6s ease;
     transform: rotate(0);
   }
   .hamburger .bigMacOn {
@@ -609,7 +602,7 @@ a {
     content: "";
     left: 0;
     right: 0;
-    border: 1px solid #F0FDF0;
+    border: 1px solid #E6F4F1;
     border-radius: 0.7rem;
     transition: transform 0.4s ease;
   }
@@ -655,12 +648,30 @@ a {
     opacity: 1;
   }
 }
-.menu {
-  position: relative;
-}
 @media screen and (min-width: 230px) {
   .menu {
+    position: relative;
     display: none;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3.5rem;
+  }
+  .menu a {
+    border-bottom: 2px solid transparent;
+    padding: 1rem 1rem;
+    font-family: "Roboto-Medium";
+    font-size: 1.25rem;
+    color: #3A4856;
+    transition: color 0.4s ease-in-out;
+  }
+  .menu a:hover {
+    color: #D3F4FF;
+    border-bottom: 2px solid #D3F4FF;
   }
 }
 
@@ -669,13 +680,12 @@ a {
   flex-direction: column;
   align-items: center;
   margin-top: 3.5rem;
-  padding: 2rem 2rem;
+  padding: 1.5rem 1.5rem;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  bottom: 50%;
-  box-shadow: 0 1px 6px #888F73;
+  box-shadow: 0 1px 6px #FCFCD4;
   -webkit-animation-name: menuTurnOn;
           animation-name: menuTurnOn;
   -webkit-animation-duration: 0.4s;
@@ -684,27 +694,22 @@ a {
           animation-timing-function: easy-in;
 }
 .menuMobile a {
-  text-align: center;
-  font-size: 1.5rem;
+  font-family: "Roboto-Medium";
+  font-size: 1.25rem;
   color: #466079;
-  padding: 1.5rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.25rem 0;
   width: 50%;
-}
-.menuMobile a:nth-child(1) {
-  border-bottom: 1px solid #6889A8;
-}
-.menuMobile a:nth-child(2) {
-  border-bottom: 1px solid #6889A8;
-}
-.menuMobile a:nth-child(3) {
-  border-bottom: 1px solid #6889A8;
+  border-bottom: 1px solid transparent;
+  transition: border 0.5s ease-in-out;
 }
 .menuMobile a:nth-child(4) {
-  border-bottom: 1px solid #6889A8;
   margin-bottom: 1rem;
 }
 .menuMobile a:hover, .menuMobile a:active {
-  color: #6889A8;
+  color: #9EADBD;
+  border-bottom: 1px solid #9EADBD;
 }
 
 .logo {
@@ -720,9 +725,20 @@ a {
 }
 @media screen and (min-width: 230px) {
   .logo a {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #F0FDF0;
+    font-family: "Roboto-Medium";
+    color: white;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .logo a {
+    margin-right: 3rem;
+    font-family: "Roboto-Medium";
+    font-size: 1.25rem;
+    color: #465667;
+    transition: color 0.6s ease-in-out;
+  }
+  .logo a:hover {
+    color: #FCFCD4;
   }
 }
 /*# sourceMappingURL=main.css.map */

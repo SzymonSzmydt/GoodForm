@@ -2,8 +2,8 @@
   width: 100%;
   height: $header-height;
 
-  background-color: $color-primary;
-  box-shadow: 0 3px 3px $color-primary-shadow;
+  background-color: $color-third;
+  box-shadow: 0 3px 3px $color-secondary;
 }
 
 .hamburger {   // hamburger menu
@@ -22,12 +22,11 @@
       .bigMacOff {
         width: 100%;
 
-        height: 2px;
-        background-color: $color-accent;
+        border: 1px solid $color-accent;
 
         border-radius: 0.7rem;
 
-        transition: border 1.2s;
+        transition: border 1.5s;
 
           &::after, &::before {
             position: absolute;
@@ -36,8 +35,6 @@
             height: 2px;
             background-color: $color-accent;
             border-radius: 0.7rem;
-
-            transition: top 0.6s ease;
           }
         
           &::after {
@@ -45,6 +42,7 @@
             right: 0; 
             top: 0.3rem;
 
+            transition: top 0.6s ease;
             transform: rotate(0);
           }
 
@@ -53,6 +51,7 @@
             right: 0; 
             bottom: 0.3rem;
 
+            transition: bottom 0.6s ease;
             transform: rotate(0);
           }
         }
@@ -111,10 +110,34 @@
 
 .menu {
   @include mobile {
+    position: relative;
     display: none;
   }
 
-  position: relative;
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: $header-height;
+
+    a {
+      border-bottom: 2px solid transparent;
+
+      padding: 1rem 1rem;
+      font-family: $medium-text;
+      font-size: 1.25rem;
+      color:$color-black;
+
+      transition: color 0.4s ease-in-out;
+
+      &:hover {
+        color: $color-primary;
+        border-bottom: 2px solid $color-primary;
+      }
+    }
+  }
+
 }
 
 .menuMobile {
@@ -123,13 +146,12 @@
   align-items: center;
 
   margin-top: $header-height;
-  padding: 2rem 2rem;
+  padding: 1.5rem 1.5rem;
 
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  bottom: 50%;
 
   box-shadow: 0 1px 6px $color-bonus;
 
@@ -138,34 +160,26 @@
   animation-timing-function: easy-in;
 
   a {
-    text-align: center;
-    font-size: 1.5rem;
+    font-family: $medium-text;
+    font-size: 1.25rem;
     color: $color-secondary-shadow;
 
-    padding: 1.5rem 0;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: 1.25rem 0;
     width: 50%;
 
-    &:nth-child(1) {
-      border-bottom: 1px solid $color-secondary;
-    }
-
-    &:nth-child(2) {
-      border-bottom: 1px solid $color-secondary;
-    }
-
-    &:nth-child(3) {
-      border-bottom: 1px solid $color-secondary;
-    }
-
+    border-bottom: 1px solid transparent;
+    transition: border 0.5s ease-in-out;
+ 
     &:nth-child(4) {
-      border-bottom: 1px solid $color-secondary;
-
       margin-bottom: 1rem;
     }
 
     &:hover, &:active {
-      color: $color-secondary;
-
+      color: $color-third;
+      border-bottom: 1px solid $color-third;
     }
   }
 }
@@ -184,9 +198,25 @@
 
     @include mobile {
       a {
-        font-family: $bold-text;
+        font-family: $medium-text;
         color: white;
-      }
-        
+      } 
     }
+
+    @include desktop {
+      a {
+        margin-right: 3rem;
+
+        font-family: $medium-text;
+        font-size: 1.25rem;
+        color: $color-third-shadow;
+
+        transition: color 0.6s ease-in-out;
+
+        &:hover {
+          color: $color-bonus;
+        }
+      }
+    }
+
   }

@@ -22,16 +22,8 @@
   }
 }
 
-  @mixin bigScreen {
-    @media screen and (min-width: $breakpoint-xl) {
-      @content;
-    }
-}
-
 .container {
   width: 100vw;
   margin: 0 auto;
   padding: 0 1rem;
-
-  font-family: $normal-text;
 }
