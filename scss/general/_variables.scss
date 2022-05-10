@@ -1,0 +1,28 @@
+@use "sass:math";
+
+// Main height of header
+
+$header-height: 3.5rem;
+
+// Media querty grid
+
+$columns: 12;
+$column-base-width: math.div(100%, $columns);
+
+$breakpoint-sm: 230px;
+$breakpoint-md: 760px;
+$breakpoint-lg: 1366px;
+$breakpoint-xl: 1920px;
+
+// FONTS
+
+$title-text: 'Monggirella', sans-serif;
+
+$normal-text: "DM-Sans-Regular", sans-serif; 
+$italic-text: "DM-Sans-Italic", sans-serif;
+
+$medium-text: 'DM-Sans-Medium', sans-serif;
+$medium-italic-text: 'DM-Sans-MediumItalic', sans-serif;
+
+$bold-text: 'DM-Sans-Bold', sans-serif;
+$bold-italic-text: 'DM-Sans-BoldItalic', sans-serif; 

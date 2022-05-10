@@ -1,47 +1,48 @@
 @font-face {
-  font-family: 'Roboto', sans-serif;
+  font-family: Monggirella, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url(../fonts/Roboto-Regular.ttf) format('ttf');
+  src: url(../fonts/monggirella.ttf) format('ttf');
 }
 
 @font-face {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'DM-Sans-Bold', sans-serif;
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/DM-Sans-Bold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'DM-Sans-BoldItalic', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  src: url(../fonts/DM-Sans-BoldItalic.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'DM-Sans-Italic', sans-serif;
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
-  src: url(../fonts/Roboto-Italic.ttf) format('ttf');
+  src: url(../fonts/DM-Sans-Italic.ttf) format('ttf');
 }
 
 @font-face {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(../fonts/Roboto-Medium.ttf) format('ttf');
-}
-
-@font-face {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'DM-Sans-MediumItalic', sans-serif;
   font-style: italic;
   font-weight: 500;
-  font-display: swap;
-  src: url(../fonts/Roboto-MediumItalic.ttf) format('ttf');
+  src: url(../fonts/DM-Sans-MediumItalic.ttf) format('ttf');
 }
 
 @font-face {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'DM-Sans-Medium', sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(../fonts/Roboto-Bold.ttf) format('ttf');
+  font-weight: 500;
+  src: url(../fonts/DM-Sans-Medium.ttf) format('ttf');
 }
 
 @font-face {
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url(../fonts/Roboto-BoldItalic.ttf) format('ttf');
+  font-family: 'DM-Sans-Regular', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/DM-Sans-Regular.ttf) format('ttf');
 }
