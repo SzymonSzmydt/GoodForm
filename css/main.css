@@ -379,9 +379,18 @@ a {
   src: url("../fonts/DM-Sans-Medium.ttf") format("truetype");
 }
 .container {
-  width: 100vw;
   margin: 0 auto;
   padding: 0 1rem;
+}
+@media screen and (min-width: 230px) {
+  .container {
+    width: 100mv;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container {
+    width: 1366px;
+  }
 }
 
 * {
@@ -510,44 +519,6 @@ a {
     width: 100%;
   }
 }
-@media (min-width: 1920px) {
-  .row .col-xl-1 {
-    width: 8.3333333333%;
-  }
-  .row .col-xl-2 {
-    width: 16.6666666667%;
-  }
-  .row .col-xl-3 {
-    width: 25%;
-  }
-  .row .col-xl-4 {
-    width: 33.3333333333%;
-  }
-  .row .col-xl-5 {
-    width: 41.6666666667%;
-  }
-  .row .col-xl-6 {
-    width: 50%;
-  }
-  .row .col-xl-7 {
-    width: 58.3333333333%;
-  }
-  .row .col-xl-8 {
-    width: 66.6666666667%;
-  }
-  .row .col-xl-9 {
-    width: 75%;
-  }
-  .row .col-xl-10 {
-    width: 83.3333333333%;
-  }
-  .row .col-xl-11 {
-    width: 91.6666666667%;
-  }
-  .row .col-xl-12 {
-    width: 100%;
-  }
-}
 
 .header {
   width: 100%;
@@ -563,6 +534,7 @@ a {
     cursor: pointer;
     position: relative;
     margin-top: 0.875rem;
+    margin-left: 1rem;
     width: 2rem;
     height: 2rem;
   }
@@ -615,17 +587,7 @@ a {
     transform: rotate(-45deg);
   }
 }
-@media screen and (min-width: 760px) {
-  .hamburger {
-    display: none;
-  }
-}
 @media screen and (min-width: 1366px) {
-  .hamburger {
-    display: none;
-  }
-}
-@media screen and (min-width: 1920px) {
   .hamburger {
     display: none;
   }
@@ -667,7 +629,7 @@ a {
     font-family: "Roboto-Medium";
     font-size: 1.25rem;
     color: #3A4856;
-    transition: color 0.4s ease-in-out;
+    transition: color 0.2s ease-in-out;
   }
   .menu a:hover {
     color: #D3F4FF;
@@ -702,7 +664,7 @@ a {
   padding: 1.25rem 0;
   width: 50%;
   border-bottom: 1px solid transparent;
-  transition: border 0.5s ease-in-out;
+  transition: border 0.6s ease-in-out;
 }
 .menuMobile a:nth-child(4) {
   margin-bottom: 1rem;
@@ -716,6 +678,7 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-right: 3rem;
   height: 3.5rem;
 }
 @media screen and (max-width: 230px) {
@@ -731,14 +694,27 @@ a {
 }
 @media screen and (min-width: 1366px) {
   .logo a {
-    margin-right: 3rem;
     font-family: "Roboto-Medium";
     font-size: 1.25rem;
     color: #465667;
     transition: color 0.6s ease-in-out;
   }
   .logo a:hover {
-    color: #FCFCD4;
+    color: #D3F4FF;
   }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  height: 30rem;
+  border: 1px solid #3A4856;
+  border-radius: 8px;
+  background-color: #3A4856;
+}
+
+.main__left {
+  width: 50%;
 }
 /*# sourceMappingURL=main.css.map */

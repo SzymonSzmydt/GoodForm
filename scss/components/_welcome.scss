@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 5rem;
+    height: 30rem;
+
+    border: 1px solid $color-black;
+    border-radius: $radius;
+
+    background-color: $color-black;
+}
+
+.main__left {
+    width: 50%;
+
+}
