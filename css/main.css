@@ -648,7 +648,7 @@ a {
   right: 0;
   top: 0;
   z-index: 1;
-  box-shadow: 0 1px 6px #FCFCD4;
+  box-shadow: 0 1px 6px #6889A8;
   background-color: #ffffff;
   -webkit-animation-name: menuTurnOn;
           animation-name: menuTurnOn;
@@ -710,33 +710,52 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 5rem;
-  padding: 0;
   font-family: "Roboto";
+}
+@media screen and (min-width: 230px) {
+  .main {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .main {
+    margin-top: 5rem;
+  }
 }
 
 .main__section {
   width: 50%;
   border-radius: 8px;
 }
-
-.main-left .welcome__title-box {
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
-  background-color: #E6F4F1;
+@media screen and (min-width: 230px) {
+  .main__section {
+    padding: 1rem 0;
+  }
 }
-.main-left .welcome-title {
-  padding: 0 1rem;
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: #3A4856;
+@media screen and (min-width: 1366px) {
+  .main__section {
+    padding: 1rem 1rem;
+  }
 }
 
 .welcome__left {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+}
+
+.welcome__title-box {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #E6F4F1;
+}
+
+.welcome-title {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #3A4856;
 }
 
 .welcome__left-double {
@@ -775,7 +794,34 @@ a {
   border-radius: 8px;
 }
 
-.main-right {
+.welcome__right {
+  display: block;
   background-color: #3A4856;
+  border-radius: 8px;
+}
+
+.welcome__right-title {
+  padding: 0.5rem 1rem 0;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: #E6F4F1;
+  text-align: center;
+}
+
+.welcome__right-body {
+  background-image: url("/assets/coins.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+@media screen and (min-width: 230px) {
+  .welcome__right-body {
+    height: 18.75rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .welcome__right-body {
+    height: 24.75rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
