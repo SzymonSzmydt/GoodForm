@@ -1,17 +1,89 @@
 .main {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 
     margin-top: 5rem;
-    height: 30rem;
+    padding: 0;
 
-    border: 1px solid $color-black;
+    font-family: $normal-text;
+}
+
+.main__section {
+    width: 50%;
+
     border-radius: $radius;
+}
 
+.main-left {
+    
+    .welcome__title-box {
+        display: flex;
+        align-items: center;
+
+        border-radius: $radius;
+        background-color: $color-accent;
+    }
+
+    .welcome-title {
+        padding: 0 1rem;
+
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: $color-black;
+    }
+}
+
+.welcome__left {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $color-white;
+}
+
+.welcome__left-double {
+    display: flex;
+}
+
+.welcome__left-data1 {
+    margin: 1rem 0.5rem;
+    min-width: 240px;
+    height: 113px;
+
+    background-image: url('/assets/data1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome__left-quote {
+    font-family: $italic-text;
+    font-size: 1.15rem;
+
+    padding: 1.25rem 0.5rem 0;
+}
+
+.welcome__left-text {
+    padding: 0 1rem;
+
+    font-size: 1.15rem;
+    color: $color-black;
+
+    .welcome__left-h4 {
+        font-size: 1.75rem;
+    }
+}
+
+.welcome__left-foot {
+    padding: 0 1rem;
+
+    font-size: 1.15rem;
+    color: $color-accent;
+
+    background-color: $color-secondary-shadow;
+    border-radius: $radius;
+}
+
+.main-right {
     background-color: $color-black;
 }
 
-.main__left {
-    width: 50%;
-
-}
