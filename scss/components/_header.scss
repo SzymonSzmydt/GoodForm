@@ -148,8 +148,10 @@
   left: 0;
   right: 0;
   top: 0;
+  z-index: 1;
 
   box-shadow: 0 1px 6px $color-bonus;
+  background-color: $color-white;
 
   animation-name: menuTurnOn;
   animation-duration: 0.4s;
