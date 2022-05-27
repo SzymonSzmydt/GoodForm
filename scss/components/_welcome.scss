@@ -51,12 +51,16 @@
 }
 
 .welcome__left-double {
-    display: flex;
+    display: flex; 
+    flex-wrap: wrap;   
+    justify-content: center;
+    align-items: center;
 }
 
 .welcome__left-data1 {
     margin: 1rem 0.5rem;
-    min-width: 240px;
+    width: 240px;
+    max-width: 240px;
     height: 113px;
 
     background-image: url('/assets/data1.png');

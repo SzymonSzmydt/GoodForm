@@ -760,11 +760,15 @@ a {
 
 .welcome__left-double {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome__left-data1 {
   margin: 1rem 0.5rem;
-  min-width: 240px;
+  width: 240px;
+  max-width: 240px;
   height: 113px;
   background-image: url("/assets/data1.png");
   background-repeat: no-repeat;
@@ -823,5 +827,79 @@ a {
   .welcome__right-body {
     height: 24.75rem;
   }
+}
+
+.footer {
+  font-family: "Roboto";
+  color: #E6F4F1;
+  background-color: #3A4856;
+}
+@media screen and (min-width: 230px) {
+  .footer {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .footer {
+    margin-top: 5rem;
+  }
+}
+
+.footer__box {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.foot__left {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+.foot__left a {
+  padding: 0.5rem 0;
+  color: #9EADBD;
+}
+.foot__left a:hover {
+  color: #D3F4FF;
+}
+
+@media screen and (min-width: 230px) {
+  .foot__center {
+    display: none;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .foot__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    color: #9EADBD;
+  }
+  .foot__center a {
+    padding: 0;
+    font-size: 2rem;
+    color: #9EADBD;
+  }
+  .foot__center a:hover {
+    color: #D3F4FF;
+  }
+}
+
+.foot__right {
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+  padding: 0 2rem;
+  color: #9EADBD;
+}
+.foot__right a {
+  padding: 0.5rem 0;
+  color: #9EADBD;
+}
+.foot__right a:hover {
+  color: #D3F4FF;
 }
 /*# sourceMappingURL=main.css.map */
