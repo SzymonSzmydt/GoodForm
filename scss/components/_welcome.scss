@@ -63,7 +63,7 @@
     max-width: 240px;
     height: 113px;
 
-    background-image: url('../assets/data1.png');
+    background-image: url('./assets/data1.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -127,7 +127,7 @@
     }
 
     
-    background-image: url("../assets/coins.jpg");
+    background-image: url("./assets/coins.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
