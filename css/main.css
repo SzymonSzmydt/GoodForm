@@ -770,7 +770,7 @@ a {
   width: 240px;
   max-width: 240px;
   height: 113px;
-  background-image: url("/assets/data1.png");
+  background-image: url("../assets/data1.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -813,7 +813,7 @@ a {
 }
 
 .welcome__right-body {
-  background-image: url("/assets/coins.jpg");
+  background-image: url("../assets/coins.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -827,6 +827,40 @@ a {
   .welcome__right-body {
     height: 24.75rem;
   }
+}
+
+.body__animation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "Roboto";
+}
+@media screen and (min-width: 230px) {
+  .body__animation {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .body__animation {
+    margin-top: 5rem;
+  }
+}
+.body__animation .animation-text {
+  font-family: "Roboto-Bold";
+  font-size: 1.25rem;
+  color: #3A4856;
+}
+
+.body__animation-left {
+  border: 1px solid red;
+}
+
+.body__animation-center {
+  border: 1px solid red;
+}
+
+.body__animation-right {
+  border: 1px solid red;
 }
 
 .footer {

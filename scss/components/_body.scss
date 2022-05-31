@@ -1,0 +1,36 @@
+@import "animations/keyframess";
+
+.body__animation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include mobile {
+        margin-top: 2rem;
+    }
+
+    @include desktop {
+        margin-top: 5rem;
+    }
+
+    font-family: $normal-text;
+
+    .animation-text {
+        font-family: $bold-text;
+        font-size: 1.25rem;
+        color: $color-black;
+    }
+}
+
+.body__animation-left {
+
+    border: 1px solid red;
+}
+
+.body__animation-center {
+    border: 1px solid red;
+}
+
+.body__animation-right {
+    border: 1px solid red;
+}

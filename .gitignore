@@ -25,3 +25,5 @@ node_modules/
 ### Other ###
 .test/
 .solution
+gulpfile.js
+package-lock.json
