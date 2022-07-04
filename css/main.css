@@ -831,9 +831,14 @@ a {
 
 .body__animation {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   font-family: "Roboto";
+  color: #E6F4F1;
+  background: #020024;
+  background: linear-gradient(0deg, #020024 0%, #6889a8 94%);
+  box-shadow: 6px 6px 6px 5px #D3F4FF;
+  border-radius: 8px;
 }
 @media screen and (min-width: 230px) {
   .body__animation {
@@ -845,22 +850,48 @@ a {
     margin-top: 5rem;
   }
 }
-.body__animation .animation-text {
-  font-family: "Roboto-Bold";
+
+.body__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #378980;
+  border-radius: 8px;
+}
+@media screen and (min-width: 230px) {
+  .body__box {
+    margin: 2rem 0;
+    padding: 1rem 0;
+  }
+  .body__box:nth-of-type(2) {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .body__box {
+    margin: 1rem 0;
+  }
+  .body__box:nth-of-type(2) {
+    margin: 1rem 0;
+  }
+}
+.body__box .animation-text {
+  font-family: "Roboto";
   font-size: 1.25rem;
-  color: #3A4856;
+  font-weight: 500;
+  color: #E6F4F1;
+  border-bottom: 1px solid #E6F4F1;
 }
 
-.body__animation-left {
-  border: 1px solid red;
+canvas {
+  padding: 0 0 0 3rem;
 }
 
-.body__animation-center {
-  border: 1px solid red;
-}
-
-.body__animation-right {
-  border: 1px solid red;
+.animation__left-bar {
+  display: flex;
+  align-items: flex-end;
+  color: "#E6F4F1";
+  width: 100%;
 }
 
 .footer {

@@ -15,5 +15,8 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "dependencies": {
+    "chart.js": "^3.8.0"
+  }
 }

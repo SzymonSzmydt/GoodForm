@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
     <link rel="stylesheet" href="css/main.css">
-
     <title>Solutions for  Web</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/37718715cc.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -35,17 +34,12 @@
 
             </section>
     </header>   
-
-    <!- END OF HEADER -->
-
-    <main>
-        <div class="container main row">
+    <main class="container main row">
             <section class="main__section col-sm-12 col-lg-6">      
                 <div class="welcome__left">
                     <div class="welcome__title-box">
                         <h1 class="welcome-title">Achieve more by developing all processes</h1>
                     </div>
-    
                     <div class="welcome__left-double">        
                         <div class="welcome__left-data1 col-sm-12 col-lg-6"></div>
                         <div class="welcome__left-quote col-sm-12 col-lg-6"><q>By automating tasks, we are able to focus on the development, 
@@ -65,9 +59,7 @@
                     </div>
                 </div>
             </section>
-
-            <section class="main__section col-sm-12 col-lg-6">           
-               
+            <section class="main__section col-sm-12 col-lg-6">                    
                 <div class="welcome__right">
                     <div class="welcome__right-title">
                         <p>Higher management efficiency</p>
@@ -75,46 +67,42 @@
                     <div class="welcome__right-body"></div>
                 </div>        
             </section>
-        </div>
     </main>
+    <div class="container body__animation row">
+            <section class="body__box col-sm-12 col-lg-4">
+                <h3 class="animation-text"> Efficiency </h3>
+                <div class="animation__left-bar">
+                    <canvas id="myChart" style="width:90%;max-width:90%"></canvas>
+                </div>
+            </section>
+            <section class="body__box col-sm-12 col-lg-3">
+                <h3 class="animation-text"> Data </h3>
+                <div class="animation__center-bar">
 
-    <!- END OF MAIN -->
-
-    <div class="body__animation container">
-
-        <section class="body__animation-left">
-            <h3 class="animation-text"> Efficiency </h3>
-            <div class="animation__left-bar"></div>
-        </section>
-        <section class="body__animation-center"></section>
-        <section class="body__animation-right"></section>
-
+                </div>
+            </section>
+            <section class="body__box col-sm-12 col-lg-4">
+                <h3 class="animation-text"> Sample </h3>
+            </section>
     </div>
-
-    <!- END OF BODY ANIMATION SECTION -->
-
     <footer class="footer">
         <div class="footer__box container row">
-
             <section class="foot__left col-sm-6 col-lg-4">
                 <a href="#" class="menu_home">Home</a>
                 <a href="#" class="menu_solutions">Solutions</a>
                 <a href="#" class="menu_why_us">Why Us?</a>
                 <a href="#" class="menu_contact">Contact</a>
             </section>
-
             <section class="foot__center col-lg-4">
                 <a href="#">Global Web Solutions</a>
                 <p>We help you reach the next level</p>
-            </section>
-            
+            </section>       
             <section class="foot__right col-sm-6 col-lg-4">
                 <a href="https://www.facebook.com/szymon.sz.10/"></i> Facebook <i class="fa-brands fa-facebook-square"></i></a>
                 <a href="https://github.com/SzymonSzmydt"></i> GitHub <i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/szymon-szmydt-5b0992230/"></i> LinkedIn <i class="fa-brands fa-linkedin"></i></a>
             </section>            
-        </div>
-        
+        </div>      
     </footer>
     <script type="text/javascript" src="scripts/script.js"></script>
 </body>

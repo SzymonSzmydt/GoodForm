@@ -13,7 +13,52 @@ function hamburgerAnimation() {
 
         menu.classList.toggle("menuMobile");
 }
-
-
 hamburger.addEventListener("click", hamburgerAnimation);
 
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: ["Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Pażdziernik"],
+    datasets: [{
+      backgroundColor: ["#9EADBD", "#9EADBD","#9EADBD","#9EADBD","#9EADBD", "#9EADBD", "#9EADBD"],
+      data: [40, 60, 70, 75, 85, 74, 78],
+    }]
+  },
+  options: {
+    animations: {
+        tension: {
+            duration: 1000,
+            easing: 'easeInCubic',
+            from: 10,
+            to: 0,
+            loop: true
+          }
+    },
+    scales: {
+        x: {
+            grid: {
+                tickColor: "#6889A8",
+                color: "#6889A8"
+            },
+            ticks: {
+                color: "#9EADBD"
+            },
+        },
+        y: {
+            grid: {
+                tickColor: "#6889A8",
+                color: "#6889A8"
+            },
+            ticks: {
+                color: "#9EADBD"
+            }
+        }
+    },
+    plugins: {
+        legend: {
+            display: false
+        },     
+    }
+  }
+});

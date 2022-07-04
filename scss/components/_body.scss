@@ -2,8 +2,17 @@
 
 .body__animation {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+
+    font-family: $normal-text;
+    color: $color-accent;
+
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(104,137,168,1) 94%);
+    box-shadow: 6px 6px 6px 5px $color-primary;
+
+    border-radius: $radius;
 
     @include mobile {
         margin-top: 2rem;
@@ -12,25 +21,52 @@
     @include desktop {
         margin-top: 5rem;
     }
+}
 
-    font-family: $normal-text;
+.body__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid $color-deep;
+    border-radius: $radius;
+
+    @include mobile {
+        margin: 2rem 0;
+        padding: 1rem 0;
+
+        &:nth-of-type(2) {
+            margin: 0;
+        }
+    }
+
+    @include desktop {
+        margin: 1rem 0;
+
+        &:nth-of-type(2) {
+            margin: 1rem 0;
+        }
+    }
 
     .animation-text {
-        font-family: $bold-text;
+        font-family: $normal-text;
         font-size: 1.25rem;
-        color: $color-black;
+        font-weight: 500;
+        color: $color-accent;
+
+        border-bottom: 1px solid $color-accent;
     }
 }
 
-.body__animation-left {
-
-    border: 1px solid red;
+canvas {
+    padding: 0 0 0 3rem;
 }
 
-.body__animation-center {
-    border: 1px solid red;
-}
+.animation__left-bar {
+    display: flex;
+    align-items: flex-end;
 
-.body__animation-right {
-    border: 1px solid red;
+    color: "#E6F4F1";
+
+    width: 100%;
 }
