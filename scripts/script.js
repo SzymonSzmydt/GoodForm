@@ -15,7 +15,6 @@ function hamburgerAnimation() {
 }
 hamburger.addEventListener("click", hamburgerAnimation);
 
-
 new Chart("myChart", {
   type: "bar",
   data: {
@@ -26,15 +25,6 @@ new Chart("myChart", {
     }]
   },
   options: {
-    animations: {
-        tension: {
-            duration: 1000,
-            easing: 'easeInCubic',
-            from: 10,
-            to: 0,
-            loop: true
-          }
-    },
     scales: {
         x: {
             grid: {
