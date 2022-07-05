@@ -6,10 +6,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -44,12 +42,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -57,10 +52,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -77,13 +70,10 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  /* 2 */
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -101,10 +91,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -154,14 +142,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -169,8 +153,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -179,8 +162,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -229,18 +211,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -263,10 +239,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -282,10 +256,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -300,10 +272,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -654,8 +624,6 @@ a {
           animation-name: menuTurnOn;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
-  -webkit-animation-timing-function: easy-in;
-          animation-timing-function: easy-in;
 }
 .menuMobile a {
   font-family: "Roboto-Medium";
@@ -834,9 +802,9 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   font-family: "Roboto";
-  color: #E6F4F1;
-  background: #020024;
-  background: linear-gradient(0deg, #020024 0%, #6889a8 94%);
+  color: #D3F4FF;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, rgb(2, 0, 36) 0%, rgb(104, 137, 168) 94%);
   box-shadow: 6px 6px 6px 5px #D3F4FF;
   border-radius: 8px;
 }
@@ -880,14 +848,69 @@ a {
   font-family: "Roboto";
   font-size: 1.25rem;
   font-weight: 500;
-  color: #E6F4F1;
-  border-bottom: 1px solid #E6F4F1;
+  position: relative;
+}
+@media screen and (min-width: 230px) {
+  .body__box .animation-text {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .body__box .animation-text {
+    margin-right: 3rem;
+  }
+}
+.body__box .animation-text:after {
+  position: absolute;
+  left: -3rem;
+  right: -3rem;
+  bottom: -0.5rem;
+  content: "";
+  border: 1px solid #D3F4FF;
 }
 
 .animation__left-bar {
   display: flex;
   align-items: flex-end;
   width: 100%;
+}
+
+.animation__center-bar {
+  width: 90%;
+}
+@media screen and (min-width: 1366px) {
+  .animation__center-bar {
+    margin-left: -1rem;
+    margin-right: 2rem;
+  }
+}
+.animation__center-bar .table {
+  width: 100%;
+}
+.animation__center-bar .table td {
+  border-bottom: 1px solid #9EADBD;
+}
+.animation__center-bar .table .td__first {
+  width: 50%;
+  text-align: right;
+  color: #9EADBD;
+}
+.animation__center-bar .table .td__second {
+  text-align: center;
+}
+
+.animation__right-bar {
+  padding: 1rem 3rem 1rem 0;
+}
+@media screen and (min-width: 230px) {
+  .animation__right-bar {
+    padding-left: 4rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .animation__right-bar {
+    padding-left: 0;
+  }
 }
 
 .footer {

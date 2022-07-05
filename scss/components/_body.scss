@@ -6,7 +6,7 @@
     flex-wrap: wrap;
 
     font-family: $normal-text;
-    color: $color-accent;
+    color: $color-primary;
 
     background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(104,137,168,1) 94%);
@@ -50,12 +50,29 @@
     }
 
     .animation-text {
+        @include mobile {
+            margin-right: 0;
+        }
+
+        @include desktop {
+            margin-right: 3rem;
+        }
+
+
         font-family: $normal-text;
         font-size: 1.25rem;
         font-weight: 500;
-        color: $color-accent;
 
-        border-bottom: 1px solid $color-accent;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            left: -3rem;
+            right: -3rem;
+            bottom: -0.5rem;
+            content: '';
+            border: 1px solid $color-primary;
+        }
     }
 }
 
@@ -64,4 +81,42 @@
     align-items: flex-end;
 
     width: 100%;
+}
+
+.animation__center-bar {
+    width: 90%;
+
+    @include desktop {
+        margin-left: -1rem;
+        margin-right: 2rem;
+    }
+
+    .table {
+        width: 100%;
+
+        td {
+            border-bottom: 1px solid $color-third;
+        }
+        .td__first {
+            width: 50%;
+            text-align: right;
+            color: $color-third;
+        }
+        .td__second {
+            text-align: center;
+        }
+    }
+}
+
+.animation__right-bar {
+
+    padding: 1rem 3rem 1rem 0;
+
+    @include mobile {
+        padding-left: 4rem;
+    }
+
+    @include desktop {
+        padding-left: 0;
+    }
 }

@@ -15,7 +15,7 @@ function hamburgerAnimation() {
 }
 hamburger.addEventListener("click", hamburgerAnimation);
 
-new Chart("myChart", {
+new Chart("myChart1", {
   type: "bar",
   data: {
     labels: ["Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Pażdziernik"],
@@ -51,4 +51,40 @@ new Chart("myChart", {
         },     
     }
   }
+});
+
+new Chart("myChart2", {
+    type: 'doughnut',
+    data: {
+        labels: [
+            'Global Web Solutions',
+            'Global Invest-data',
+            'OverView management'
+        ],
+        datasets: [{
+            label: 'Market share',
+            data: [200, 50, 100],
+            backgroundColor: [
+                '#378980',
+                '#BCA5AE',
+                '#D3F4FF'
+            ],
+            hoverOffset: 4
+        }]
+        },
+    options: {
+        plugins: {
+            legend: {
+                align: 'start',
+                display: true,
+                labels: {
+                    boxWidth: 20,
+                    color: "#D3F4FF",
+                    font: {
+                        size: 14,
+                    }
+                }
+            }
+        }
+    }
 });
