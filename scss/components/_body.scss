@@ -42,6 +42,7 @@
 
     @include desktop {
         margin: 1rem 0;
+        padding: 0 0 0 2.5rem;
 
         &:nth-of-type(2) {
             margin: 1rem 0;
@@ -58,15 +59,9 @@
     }
 }
 
-canvas {
-    padding: 0 0 0 3rem;
-}
-
 .animation__left-bar {
     display: flex;
     align-items: flex-end;
-
-    color: "#E6F4F1";
 
     width: 100%;
 }
