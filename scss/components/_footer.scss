@@ -17,7 +17,14 @@
     display: flex;
     flex-wrap: wrap;
 
-    padding: 2rem;
+    @include mobile {
+        padding: 1.5rem 0;
+    }
+
+    @include desktop {
+        padding: 2rem;
+    }
+
 }
 
 .foot__left {
