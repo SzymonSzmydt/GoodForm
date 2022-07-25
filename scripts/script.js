@@ -88,3 +88,31 @@ new Chart("myChart2", {
         }
     }
 });
+
+new Chart("line-chart", {
+    type: 'line',
+    data: {
+        labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+        datasets: [{
+            label: 'Sell in mln dolar ',
+            data: [12, 29, 35, 31, 50, 45, 53, 49, 67, 70, 62, 64, 50],
+            backgroundColor: ['#378980'],
+            fill: false,
+            borderColor: '#6889A8',
+            tension: 0.1
+        },
+        {
+            label: "Cost's in mln dolar ",
+            data: [9, 15, 19, 26, 22, 28, 25, 27, 24, 20, 18, 15, 20],
+            backgroundColor: ['#9F696B'],
+            fill: false,
+            borderColor: '#9F696B',
+            tension: 0.1
+        }]
+    },
+    plugins: {
+        legend: {
+            display: true
+        },     
+    },
+});

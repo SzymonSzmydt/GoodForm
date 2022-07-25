@@ -57,15 +57,8 @@
     align-items: center;
 }
 
-.welcome__left-data1 {
+.welcome__line-chart {
     margin: 1rem 0.5rem;
-    width: 240px;
-    max-width: 240px;
-    height: 113px;
-
-    background-image: url('../assets/data1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .welcome__left-quote {
@@ -125,13 +118,31 @@
     @include desktop {
         height: 24.75rem;
     }
-
     
     background-image: url("../assets/coins.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
+
+.welcome__right-footer {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    font-family: $light-text;
+    background-color: $color-deep;
+    border-radius: $radius;
+
+    color: $color-white;
+}
+
+.welcome-title-green {
+    padding: 0.25rem;
+    font-size: 1.15rem;
+    background-color: $color-harmony;
+    width: fit-content;
+}
+
+
 
 
 

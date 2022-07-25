@@ -121,14 +121,14 @@
       border-bottom: 2px solid transparent;
 
       padding: 1rem 1rem;
-      font-family: $medium-text;
+      font-family: $light-text;
       font-size: 1.25rem;
-      color:$color-black;
+      color:$color-primary;
 
       transition: color 0.2s ease-in-out;
 
       &:hover {
-        color: $color-primary;
+        color: $color-white;
         border-bottom: 2px solid $color-primary;
       }
     }
@@ -157,7 +157,7 @@
   animation-duration: 0.4s;
 
   a {
-    font-family: $medium-text;
+    font-family: $light-text;
     font-size: 1.25rem;
     color: $color-secondary-shadow;
 
@@ -188,6 +188,7 @@
 
     margin-right: 3rem;
     height: $header-height;
+    font-family: $light-text;
 
     @include watch {
       display: none;
@@ -195,17 +196,15 @@
 
     @include mobile {
       a {
-        font-family: $medium-text;
+
         color: white;
       } 
     }
 
     @include desktop {
       a {
-
-        font-family: $medium-text;
         font-size: 1.25rem;
-        color: $color-third-shadow;
+        color: $color-white;
 
         transition: color 0.6s ease-in-out;
 
